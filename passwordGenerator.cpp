@@ -19,6 +19,8 @@ int main()
     cout << "Enter the number of digits you would like the password to be: ";
     cin >> length;
 
+    srand(time(NULL));
+
     for (int i = 1; i <= length; i++)
     {
         randomNum = rand() % 68 + 1;
