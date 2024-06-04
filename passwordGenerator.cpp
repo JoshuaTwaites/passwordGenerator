@@ -14,7 +14,7 @@ int main()
 
     ofstream out_file;
 
-    out_file.open("Password.txt");
+    out_file.open("Password.txt", ofstream::app);
 
     cout << "Enter the number of digits you would like the password to be: ";
     cin >> length;
@@ -27,6 +27,9 @@ int main()
 
         out_file << characters[randomNum];
     }
+
+    out_file << "\nThe next password is: " << endl;
+    out_file.close();
 
     cout << "Done!" << endl;
 
