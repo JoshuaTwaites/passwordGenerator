@@ -19,7 +19,13 @@ int main()
     cout << "Enter the number of digits you would like the password to be: ";
     cin >> length;
 
+    string purposeOfPassword;
+    cout << "What website will this password be used for: ";
+    cin >> purposeOfPassword;
+
     srand(time(NULL));
+
+    out_file << "Your password for " << purposeOfPassword << " is: ";
 
     for (int i = 1; i <= length; i++)
     {
@@ -28,10 +34,10 @@ int main()
         out_file << characters[randomNum];
     }
 
-    out_file << "\nThe next password is: " << endl;
+    out_file << "\n";
     out_file.close();
 
-    cout << "Done!" << endl;
+    cout << "Done! You can find your passwords in this folder within the file Password.txt" << endl;
 
     return 0;
 }
